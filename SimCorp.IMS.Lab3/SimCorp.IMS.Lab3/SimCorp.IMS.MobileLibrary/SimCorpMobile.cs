@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SimCorp.IMS.Lab3 {
     public class SimCorpMobile : Mobile {
@@ -11,26 +12,34 @@ namespace SimCorp.IMS.Lab3 {
         private readonly BatteryAttribute vBattery;
         private readonly SimCardSlot vSlot;
 
-        public override ScreenAttribute Screen {
-            get {
+        public override ScreenAttribute Screen
+        {
+            get
+            {
                 return vScreen;
             }
         }
 
-        public override KeyboardAttribute Keyboard {
-            get {
+        public override KeyboardAttribute Keyboard
+        {
+            get
+            {
                 return vKeyboard;
-            } 
+            }
         }
 
-        public override BatteryAttribute Battery {
-            get {
+        public override BatteryAttribute Battery
+        {
+            get
+            {
                 return vBattery;
             }
         }
 
-        public override SlotAttribute Slot {
-            get {
+        public override SlotAttribute Slot
+        {
+            get
+            {
                 return vSlot;
             }
         }
@@ -56,5 +65,14 @@ namespace SimCorp.IMS.Lab3 {
             vBattery = new BatteryAttribute(BatteryAttribute.Types.LitiumIon, 2500);
             vSlot = new SimCardSlot(SimCardSlot.FormFactors.MicroSim, 100, 200);
         }
+
+        public SimCorpMobile(SMSProvider.SMSRecievedDelegate del) : this() {
+            InitMessanger(del);
+        }
+
+        public void InitMessanger(SMSProvider.SMSRecievedDelegate del) {
+            SmsProvider = new SMSProvider(del);
+        }
+
     }
 }

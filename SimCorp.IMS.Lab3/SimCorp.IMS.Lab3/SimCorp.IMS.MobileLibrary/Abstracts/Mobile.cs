@@ -2,13 +2,14 @@
 using System.Text;
 
 namespace SimCorp.IMS.Lab3 {
-    public abstract class Mobile { 
+    public abstract class Mobile {
         public abstract ScreenAttribute Screen { get; }
         public abstract KeyboardAttribute Keyboard { get; }
         public abstract BatteryAttribute Battery { get; }
         public abstract SlotAttribute Slot { get; }
         public IPlayback PlaybackComponent { get; set; }
         public ICharger ChargingComponent { get; set; }
+        public SMSProvider SmsProvider { get; set; }
 
         public void Play(object data) {
             PlaybackComponent.Play(data);
