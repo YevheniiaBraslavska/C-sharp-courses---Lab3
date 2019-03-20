@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimCorp.IMS.MobileLibrary;
 
 namespace SimCorp.IMS.Lab3 {
     public class SimCorpMobile : Mobile {
@@ -64,15 +65,12 @@ namespace SimCorp.IMS.Lab3 {
 
             vBattery = new BatteryAttribute(BatteryAttribute.Types.LitiumIon, 2500);
             vSlot = new SimCardSlot(SimCardSlot.FormFactors.MicroSim, 100, 200);
+
+            SmsProvider = new SMSProvider();
         }
 
-        public SimCorpMobile(SMSProvider.SMSRecievedDelegate del) : this() {
-            InitMessanger(del);
+        public void AddMessanger(EventHandler<SMSRecieverEventArgs> func) {
+            SmsProvider.SMSRecieved += func;
         }
-
-        public void InitMessanger(SMSProvider.SMSRecievedDelegate del) {
-            SmsProvider = new SMSProvider(del);
-        }
-
     }
 }

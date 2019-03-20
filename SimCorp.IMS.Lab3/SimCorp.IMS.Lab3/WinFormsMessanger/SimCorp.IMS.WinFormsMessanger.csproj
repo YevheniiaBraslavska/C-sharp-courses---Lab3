@@ -84,6 +84,10 @@
       <Project>{bf830402-e2bf-42e9-b6cc-677d6570d885}</Project>
       <Name>SimCorp.IMS.MobileLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SimCorp.IMS.WinFormsApp\SimCorp.IMS.WinFormsApp.csproj">
+      <Project>{909c4de1-bd41-435e-bdf5-da1517970cbc}</Project>
+      <Name>SimCorp.IMS.WinFormsApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

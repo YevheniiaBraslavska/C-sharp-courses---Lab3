@@ -48,7 +48,7 @@
     <Compile Include="Battery\BatteryAttribute.cs" />
     <Compile Include="Charger\WirelessCharger.cs" />
     <Compile Include="Charger\USBCharger.cs" />
-    <Compile Include="FakeOutput.cs" />
+    <Compile Include="Output\FakeOutput.cs" />
     <Compile Include="Formatter.cs" />
     <Compile Include="Headset\IPhoneHeadset.cs" />
     <Compile Include="Headset\PhoneSpeaker.cs" />
@@ -58,7 +58,6 @@
     <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Interfaces\IPlayback.cs" />
     <Compile Include="Interfaces\IScreenImage.cs" />
-    <Compile Include="Interfaces\IWinAppLog.cs" />
     <Compile Include="Keyboard\KeyboardAttribute.cs" />
     <Compile Include="Keyboard\OnScreenKeyboard.cs" />
     <Compile Include="Keyboard\PhisicalKeyboard.cs" />
@@ -72,6 +71,8 @@
     <Compile Include="Slot\SimCardSlot.cs" />
     <Compile Include="Slot\SlotAttribute.cs" />
     <Compile Include="SMSProvider.cs" />
+    <Compile Include="Output\WinLogOutput.cs" />
+    <Compile Include="SMSRecieverEventArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

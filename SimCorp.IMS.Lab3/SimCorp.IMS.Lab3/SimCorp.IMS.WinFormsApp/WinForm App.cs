@@ -3,24 +3,12 @@ using System.Windows.Forms;
 using SimCorp.IMS.Lab3;
 using SimCorp.IMS.MobileLibrary;
 
-namespace WinFormsApp {
-    public partial class WinFormApp : Form, IWinAppLog {
+namespace SimCorp.IMS.WinFormApp {
+    public partial class WinFormApp : Form {
         public WinFormApp() {
             InitializeComponent();
             Mobile = new SimCorpMobile();
-            Output = new WinLogOutput(this);
-        }
-
-        public string LogText
-        {
-            get
-            {
-                return TextBox.Text;
-            }
-            set
-            {
-                TextBox.Text = value;
-            }
+            Output = new WinLogOutput(TextBox);
         }
 
         private SimCorpMobile Mobile

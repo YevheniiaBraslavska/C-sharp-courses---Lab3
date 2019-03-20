@@ -7,8 +7,8 @@ namespace MobileLibrary.Test {
     public class WirelessChargerTest {
         [TestMethod]
         public void ChargeValidOutputText() {
-            FakeOutput output = new FakeOutput();
-            WirelessCharger charger = new WirelessCharger(output,1.5f);
+            var output = new FakeOutput();
+            var charger = new WirelessCharger(output,1.5f);
 
             charger.Charge();
 

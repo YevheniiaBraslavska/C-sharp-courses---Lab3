@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp {
+﻿namespace SimCorp.IMS.WinFormApp {
     partial class WinFormApp {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,8 @@
             this.ChargerGroupBox = new System.Windows.Forms.GroupBox();
             this.USBChargerButton = new System.Windows.Forms.RadioButton();
             this.WirelessChargerButton = new System.Windows.Forms.RadioButton();
-            this.TextBox = new System.Windows.Forms.RichTextBox();
             this.ApplyButton = new System.Windows.Forms.Button();
+            this.TextBox = new System.Windows.Forms.RichTextBox();
             this.PlaybackGroupBox.SuspendLayout();
             this.ChargerGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -105,20 +105,11 @@
             this.WirelessChargerButton.AutoSize = true;
             this.WirelessChargerButton.Location = new System.Drawing.Point(17, 30);
             this.WirelessChargerButton.Name = "WirelessChargerButton";
-            this.WirelessChargerButton.Size = new System.Drawing.Size(100, 17);
+            this.WirelessChargerButton.Size = new System.Drawing.Size(102, 17);
             this.WirelessChargerButton.TabIndex = 0;
             this.WirelessChargerButton.TabStop = true;
             this.WirelessChargerButton.Text = "WirelessCharger";
             this.WirelessChargerButton.UseVisualStyleBackColor = true;
-            // 
-            // TextBox
-            // 
-            this.TextBox.Location = new System.Drawing.Point(26, 210);
-            this.TextBox.Name = "TextBox";
-            this.TextBox.ReadOnly = true;
-            this.TextBox.Size = new System.Drawing.Size(391, 153);
-            this.TextBox.TabIndex = 3;
-            this.TextBox.Text = "";
             // 
             // ApplyButton
             // 
@@ -130,13 +121,22 @@
             this.ApplyButton.UseVisualStyleBackColor = true;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
+            // TextBox
+            // 
+            this.TextBox.Enabled = false;
+            this.TextBox.Location = new System.Drawing.Point(26, 198);
+            this.TextBox.Name = "TextBox";
+            this.TextBox.Size = new System.Drawing.Size(391, 167);
+            this.TextBox.TabIndex = 4;
+            this.TextBox.Text = "";
+            // 
             // WinFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 391);
-            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.TextBox);
+            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.ChargerGroupBox);
             this.Controls.Add(this.PlaybackGroupBox);
             this.MaximizeBox = false;
@@ -159,8 +159,8 @@
         private System.Windows.Forms.GroupBox ChargerGroupBox;
         private System.Windows.Forms.RadioButton USBChargerButton;
         private System.Windows.Forms.RadioButton WirelessChargerButton;
-        private System.Windows.Forms.RichTextBox TextBox;
         private System.Windows.Forms.Button ApplyButton;
+        private System.Windows.Forms.RichTextBox TextBox;
     }
 }
 
